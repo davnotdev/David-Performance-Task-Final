@@ -1,6 +1,7 @@
 extends Area2D
 
 
+@onready var enemy_hit_sound = $EnemyHitSound
 @onready var sprite_2d = $Sprite2D
 @export var speed = 200;
 var move_ticks = 0;
@@ -34,4 +35,5 @@ func _process(delta):
 
 
 func _on_body_entered(body):
+	enemy_hit_sound.play()
 	hide()

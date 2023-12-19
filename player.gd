@@ -31,3 +31,7 @@ func _process(delta):
 	else:
 		move_ticks = 0
 		rotation = 0
+
+
+func _on_body_entered(body):
+	hide()
